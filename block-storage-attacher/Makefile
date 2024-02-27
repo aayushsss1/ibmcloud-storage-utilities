@@ -81,7 +81,6 @@ buildimage-fips: login-registry deps
 	ASSETURL="$$(curl -X GET -H "Authorization: token ${GHE_TOKEN}" "https://github.ibm.com/api/v3/repos/alchemy-registry/base/releases/latest" | jq -r '.assets[0].url')"; \
 	curl -H "Authorization: token ${GHE_TOKEN}" -H "Accept: application/octet-stream" -L $$ASSETURL > base.image
 	set -a
-	source base.image && \
 	IMAGE_TAG="$$(echo $$COMMON_ARMADA_golang_builder | cut -d':' -f2)" && \
 	BUILDER="${PROXY_IMAGE_URL}/armada-master/ibm-storage-golang:$$IMAGE_TAG" && \
 	bt build image -goproxy -- docker build --rm \
