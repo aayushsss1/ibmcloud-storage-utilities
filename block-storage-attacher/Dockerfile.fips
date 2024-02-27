@@ -1,4 +1,4 @@
-ARG BUILDER
+ARG BUILDER=blank
 
 FROM $BUILDER as builder
 

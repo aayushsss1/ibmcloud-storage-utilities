@@ -84,6 +84,7 @@ buildimage-fips: login-registry deps
 	. ./base.image && \
 	IMAGE_TAG="$$(echo $$COMMON_ARMADA_golang_builder | cut -d':' -f2)" && \
 	BUILDER="${PROXY_IMAGE_URL}/armada-master/ibm-storage-golang:$$IMAGE_TAG" && \
+	echo ${BUILDER} && \
 	bt build image -goproxy -- docker build --rm \
 			--build-arg git_commit_id=${GIT_COMMIT_SHA} \
         	--build-arg git_remote_url=${GIT_REMOTE_URL} \
