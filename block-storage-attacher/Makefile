@@ -19,7 +19,7 @@ GOSEC_VERSION="v2.14.0"
 NANCY_VERSION := 1.0.42
 
 PROXY_IMAGE_URL_DOCKERHUB:="docker.io"
-PROXY_IMAGE_URL=docker-na.artifactory.swg-devops.com/wcp-alchemy-containers-team-icr-docker-remote 
+PROXY_IMAGE_URL=docker-na.artifactory.swg-devops.com/wcp-alchemy-containers-team-icr-docker-remote
 ifdef ARTIFACTORY_API_KEY
 PROXY_IMAGE_URL_DOCKERHUB="docker-na.artifactory.swg-devops.com/wcp-alchemy-containers-team-dockerhub-docker-remote"
 endif
