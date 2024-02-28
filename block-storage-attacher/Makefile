@@ -92,7 +92,7 @@ buildimage-fips: login-registry deps
         	--build-arg travis_build_number=${TRAVIS_BUILD_NUMBER} \
 			--build-arg REPO_SOURCE_URL=${REPO_SOURCE_URL} \
 			--build-arg BUILD_URL="${BUILD_URL}" \
-			--build-arg IMAGE_TAG=$$IMAGE_TAG \
+			--build-arg IMAGE_TAG=${IMAGE_TAG} \
 			--build-arg BUILDER=${BUILDER} \
 			--build-arg GOOS="linux" \
 			--build-arg GOARCH="amd64" \
